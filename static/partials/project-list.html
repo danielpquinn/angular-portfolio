@@ -1,0 +1,23 @@
+<section class="work">
+  <h2>Work</h2>
+  <ul equal-height>
+    <li ng-repeat="project in projects">
+      <a class="link-wrapper" href="/work/{{project.slug}}">
+        <div class="thumb">
+          <img src="{{project.thumb}}" alt="{{project.title}}" class="work-thumb" />
+          <div class="screen"></div>
+        </div>
+        <div class="title">
+          {{project.title}}
+        </div>
+      </a>
+      <span class="tags">
+        <a ng-repeat="tag in project.tags" href="/tag/{{tag}}">{{tag}}</a>
+      </span>
+    </li>
+  </ul>
+
+  <p>
+    <a class="back" onclick="history.back(-1)">back</a>
+  </p>
+</section><!-- .work -->

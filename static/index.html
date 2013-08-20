@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dan Quinn | Front End Development</title>
+        <link rel="stylesheet" href="/stylesheets/screen.css">
+        <script src="/js/components/requirejs/require.js" data-main="/js/main"></script>
+    </head>
+    <body>
+        <div id="color"></div>
+        <div id="main">
+            <section id="navigation">
+                <header>
+                  <h1 class="logo">
+                    <a href="/">Dan Quinn | Front End Developer | Seattle, WA</a>
+                  </h1>
+                </header>
+                <nav role="navigation">
+                  <a class="toggle" toggle>Toggle Navigation</a>
+                  <ul>
+                    <li><a class="work" href="/work" tabindex="1">Work</a></li>
+                    <li><a class="about" href="/about" tabindex="2">About</a></li>
+                    <li><a class="contact" href="/contact" tabindex="3">Contact</a></li>
+                    <li><a class="resume" href="/resume" tabindex="4">Resume</a></li>
+                  </ul>
+                </nav>
+            </section><!-- #navigation -->
+            <section id="content">
+              <div ng-view></div>
+            </section><!-- #content -->
+            <section class="social">
+                <a href="http://github.com/danielpquinn" data-bypass="true" target="_blank" class="github">Github</a>
+                <a href="http://www.linkedin.com/in/danpquinn" data-bypass="true" target="_blank" class="linkedin">Linkedin</a>
+            </section>
+        </div>
+    </body>
+</html>

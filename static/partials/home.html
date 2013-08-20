@@ -1,0 +1,51 @@
+<header class="intro">
+
+  <h1>User Interface Development <small>&amp;</small> Design</h1>
+
+  <p class="lead">I am a motivated and reliable developer with a passion for building useful and elegant user interfaces. I have experience with a wide range of standards based web technologies, and am capable of writing production-ready front end code and integrating it with large scale web applications.</p>
+
+</header><!-- .intro -->
+
+<section class="work">
+  <h2>Work</h2>
+  <ul equal-height>
+    <li ng-repeat="project in projects">
+      <a class="link-wrapper" href="/work/{{project.slug}}">
+        <div class="thumb">
+          <img src="{{project.thumb}}" alt="{{project.title}}" class="work-thumb" />
+          <div class="screen"></div>
+        </div>
+        <div class="title">
+          {{project.title}}
+        </div>
+      </a>
+      <span class="tags">
+        <a ng-repeat="tag in project.tags" href="tag/{{tag}}">{{tag}}</a>
+      </span>
+    </li>
+  </ul>
+</section><!-- .work -->
+
+<section class="contact">
+  <h2>Elsewhere</h2>
+  <ul>
+    <li>
+      <a class="link-wrapper" target="_blank" href="http://github.com/danielpquinn">
+        <span class="github">github.com/danielpquinn</span>
+        <span class="title">github.com/danielpquinn</span>
+      </a>
+    </li>
+    <li>
+      <a class="link-wrapper" target="_blank" href="http://www.linkedin.com/in/danpquinn">
+        <span class="linkedin">linkedin.com/in/danpquinn</span>
+        <span class="title">linkedin.com/in/danpquinn</span>
+      </a>
+    </li>
+    <li>
+      <a class="link-wrapper" target="_blank" href="http://twitter.com/danielpquinn">
+        <span class="twitter">@danielpquinn</span>
+        <span class="title">@danielpquinn</span>
+      </a>
+    </li>
+  </ul>
+</section><!-- .contact -->
