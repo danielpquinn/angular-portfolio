@@ -488,6 +488,8 @@ body {
 .work {
 
   ul {
+    overflow: hidden;
+    
     margin: 0;
     padding: 0;
 
@@ -846,7 +848,6 @@ body {
 }
 
 .back {
-  clear: both;
   background-image: url('../images/back.png');
   display: inline-block;
   margin: 0;

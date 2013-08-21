@@ -312,6 +312,7 @@ body {
  * Work
  */
 .work ul {
+  overflow: hidden;
   margin: 0;
   padding: 0; }
   .work ul li {
@@ -553,7 +554,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); }
 
 .back {
-  clear: both;
   background-image: url("../images/back.png");
   display: inline-block;
   margin: 0;
