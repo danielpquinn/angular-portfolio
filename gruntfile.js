@@ -1,6 +1,8 @@
 module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
 
@@ -8,14 +10,32 @@ module.exports = function (grunt) {
       compile: {
         options: {
           name: 'main',
-          baseUrl: 'static/scripts',
-          mainConfigFile: 'static/scripts/main.js',
-          out: 'static/scripts/main.build.js'
+          baseUrl: 'static/js',
+          mainConfigFile: 'static/js/main.js',
+          out: 'static/js/main.build.js'
         }
       }
+    },
+
+    sass: {
+      dist: {
+        files: {
+          'static/stylesheets/screen.css': 'static/stylesheets/screen.scss'
+        }
+      }
+    },
+
+    watch: {
+      css: {
+        files: 'static/stylesheets/*.scss',
+        tasks: ['sass'],
+        options: {
+          livereload: true,
+        },
+      },
     }
 
   });
 
-  grunt.registerTask('build', ['requirejs']);
+  grunt.registerTask('build', ['requirejs', 'sass']);
 }

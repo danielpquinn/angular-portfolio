@@ -5,9 +5,6 @@
 *.swp
 *.out
 
-## python files to ignore
-*.pyc
-
 node_modules
 static/js/components
 static/images/work
