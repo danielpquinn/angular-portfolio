@@ -5,9 +5,10 @@ define([
       if ($(window).innerWidth() > 949) {
         return;
       }
+      var toggleEvent = Modernizr.touch ? 'touchend' : 'click';
       var $el = $(element);
-      $el.on('touchend click', onToggleTouchEnd);
-      $(document).on('touchend click', onDocumentTouchEnd);
+      $el.on(toggleEvent, onToggleTouchEnd);
+      $(document).on(toggleEvent, onDocumentTouchEnd);
 
       function onToggleTouchEnd(e) {
         e.stopPropagation();

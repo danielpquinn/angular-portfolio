@@ -65,11 +65,11 @@ define([
     var self = this;
 
     self.$window.on('resize', self.onWindowResize.apply(self, arguments));
-  }
+  };
 
   a.onWindowResize = function () {
     this.$content.css({ 'min-height' : this.$window.height() - this.$content.offset().top + 'px' });
-  } 
+  };
 
   return App;
 
