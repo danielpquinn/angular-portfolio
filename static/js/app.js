@@ -5,7 +5,8 @@ define([
   'controllers/projectListController',
   'controllers/projectDetailController',
   'directives/equalHeight',
-  'directives/toggle'
+  'directives/toggle',
+  'angularRoute'
 ], function ($, angular, StaticPageController, ProjectListController, ProjectDetailController, EqualHeight, Toggle) {
 
   "use strict";
@@ -19,7 +20,7 @@ define([
     this.$content = $('#content');
     this.$window = $(window);
 
-    this.portfolio = angular.module('portfolio', []).config([
+    this.portfolio = angular.module('portfolio', ['ngRoute']).config([
       '$routeProvider',
       '$locationProvider',
       function ($routeProvider, $locationProvider) {

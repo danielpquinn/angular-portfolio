@@ -1,22 +1,25 @@
 require.config({
   paths: {
-    "jquery": "components/jquery/jquery",
-    "underscore": "components/underscore/underscore",
-    "angular": "components/angular/angular"
+    'jquery': 'components/jquery/jquery',
+    'underscore': 'components/underscore/underscore',
+    'angular': 'components/angular/angular',
+    'angularRoute': 'components/angular-route/angular-route'
   },
   shim: {
-    "angular": {
-      "exports": "angular"
+    'angular': {
+      'exports': 'angular'
     },
-    "underscore": {
-      "exports": "_"
+    'angularRoute': ['angular'],
+    'underscore': {
+      'exports': '_'
     }
   }
 });
 
 require([
+  'angular',
   'app'
-], function (App) {
+], function (angular, App) {
   
   var app = new App();
 
