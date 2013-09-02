@@ -312,9 +312,14 @@ body {
  * Work
  */
 .work ul {
-  overflow: hidden;
+  display: block;
+  width: 100%;
   margin: 0;
   padding: 0; }
+  .work ul::after {
+    display: block;
+    clear: both;
+    content: ' '; }
   .work ul li {
     background-color: #f8f8f8;
     padding: 10px;
@@ -432,7 +437,7 @@ body {
 .contact {
   clear: both; }
   .contact ul {
-    margin: 0;
+    margin: 0 0 1.25em 0;
     padding: 0; }
     .contact ul li {
       background-color: #f8f8f8;
@@ -562,7 +567,8 @@ body {
   padding-left: 1em;
   background-size: 0.625em 2.125em;
   background-repeat: no-repeat;
-  cursor: pointer; }
+  cursor: pointer;
+  clear: both; }
 
 .back:hover {
   background-position: 0 -1.0625em;

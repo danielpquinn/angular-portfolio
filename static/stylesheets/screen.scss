@@ -488,10 +488,16 @@ body {
 .work {
 
   ul {
-    overflow: hidden;
-    
+    display: block;
+    width: 100%;
     margin: 0;
     padding: 0;
+
+    &::after {
+      display: block;
+      clear: both;
+      content: ' ';
+    }
 
     li {
       background-color: $offWhite;
@@ -662,7 +668,7 @@ body {
   clear: both;
 
   ul {
-    margin: 0;
+    margin: 0 0 pxtoem(20px) 0;
     padding: 0;
 
     li {
@@ -857,6 +863,7 @@ body {
   background-size: pxtoem(10px) pxtoem(34px);
   background-repeat: no-repeat;
   cursor: pointer;
+  clear: both;
 }
 
 .back:hover {
