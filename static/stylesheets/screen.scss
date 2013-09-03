@@ -9,6 +9,19 @@ $base: 16px;
   @return ($px / $base)+0em;
 }
 
+@mixin transition($time, $transition, $property) {
+  -webkit-transition: $time $transition $property;
+  -moz-transition: $time $transition $property;
+  -ms-transition: $time $transition $property;
+  -o-transition: $time $transition $property;
+  transition: $time $transition $property;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+
 @media (max-width: 1300px) {
   body {
     font-size: 16px;
@@ -149,6 +162,18 @@ $base: 16px;
   font-weight: normal;
   font-style: normal;
 
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  opacity: 0.01;
+  @include transition(0.2s, linear, all);
 }
 
 h1, h2, h3, h4, h5 {
@@ -450,9 +475,9 @@ body {
 
 @media (min-width: 950px) {
   #content {
+    margin-left: pxtoem(270px);
     background: white;
     padding: pxtoem(100px) pxtoem(90px);
-    margin-left: pxtoem(270px);
     width: pxtoem(780px);
     float: left;
     margin-top: pxtoem(20px);
@@ -916,4 +941,17 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+ }
+
+ /*
+  * Animation
+  */
+ 
+ #content.ng-enter {
+  @include transition(0.2s, linear, opacity);
+  opacity: 0;
+ }
+
+ #content.ng-enter.ng-enter-active {
+  opacity: 1;
  }

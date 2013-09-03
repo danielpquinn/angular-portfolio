@@ -6,6 +6,7 @@ define([
   'controllers/projectDetailController',
   'directives/equalHeight',
   'directives/toggle',
+  'angularAnimate',
   'angularRoute'
 ], function ($, angular, StaticPageController, ProjectListController, ProjectDetailController, EqualHeight, Toggle) {
 
@@ -20,7 +21,7 @@ define([
     this.$content = $('#content');
     this.$window = $(window);
 
-    this.portfolio = angular.module('portfolio', ['ngRoute']).config([
+    this.portfolio = angular.module('portfolio', ['ngRoute', 'ngAnimate']).config([
       '$routeProvider',
       '$locationProvider',
       function ($routeProvider, $locationProvider) {
@@ -60,6 +61,10 @@ define([
     this.portfolio.directive('toggle', Toggle);
 
     angular.bootstrap(document, ['portfolio']);
+
+    $('body').css({
+      'opacity': 1
+    });
   }
 
   a.bindEvents = function () {

@@ -3,12 +3,14 @@ require.config({
     'jquery': 'components/jquery/jquery',
     'underscore': 'components/underscore/underscore',
     'angular': 'components/angular/angular',
+    'angularAnimate': 'components/angular-animate/angular-animate',
     'angularRoute': 'components/angular-route/angular-route'
   },
   shim: {
     'angular': {
       'exports': 'angular'
     },
+    'angularAnimate': ['angular'],
     'angularRoute': ['angular'],
     'underscore': {
       'exports': '_'
