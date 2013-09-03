@@ -9,6 +9,7 @@ module.exports = function (grunt) {
     requirejs: {
       compile: {
         options: {
+          optimize: 'none',
           name: 'main',
           baseUrl: 'static/js',
           mainConfigFile: 'static/js/main.js',
