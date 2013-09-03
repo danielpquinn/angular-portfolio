@@ -44,6 +44,8 @@ $base: 16px;
 * Fonts
 */
 
+@import url(http://fonts.googleapis.com/css?family=Codystar);
+
 @font-face {
   font-family: 'OpenSansLight';
   src: url('../fonts/OpenSans-Light-webfont.eot');
@@ -183,12 +185,22 @@ h1, h2, h3, h4, h5 {
   font-family: 'OpenSansLight';
 }
 
+.display {
+  font-family: 'Codystar', cursive;
+  text-transform: uppercase;
+}
+
 section {
   margin: 0;
   padding: 0 0 60px 0;
 
   header {
     padding: 0 0 60px 0;
+  }
+
+  > h1 {
+    font-family: 'Codystar', cursive;
+    text-transform: uppercase;
   }
 }
 

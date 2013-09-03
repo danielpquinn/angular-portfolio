@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Codystar);
 @media (max-width: 1300px) {
   body {
     font-size: 16px; } }
@@ -93,11 +94,18 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
   font-family: 'OpenSansLight'; }
 
+.display {
+  font-family: 'Codystar', cursive;
+  text-transform: uppercase; }
+
 section {
   margin: 0;
   padding: 0 0 60px 0; }
   section header {
     padding: 0 0 60px 0; }
+  section > h1 {
+    font-family: 'Codystar', cursive;
+    text-transform: uppercase; }
 
 p {
   margin: 0;
