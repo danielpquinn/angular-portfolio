@@ -2,9 +2,11 @@ define([
   'underscore'
 ], function (_) {
 
-  var ProjectDetailController = function ($scope, $routeParams, $http) {
+  var ProjectDetailController = function ($scope, $routeParams, $http, $sce) {
     $http.get('/projects.json').success(function (data) {
-      $scope.project = _.findWhere(data, {slug: $routeParams.slug});
+      var project = _.findWhere(data, {slug: $routeParams.slug});
+      $scope.project = project;
+      $scope.description = $sce.trustAsHtml(project.description);
     });
   }
 
