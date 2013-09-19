@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Codystar);
+@import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:700);
 @media (max-width: 1300px) {
   body {
     font-size: 16px; } }
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5 {
   font-family: 'OpenSansLight'; }
 
 .display {
-  font-family: 'Codystar', cursive;
+  font-family: 'Averia Serif Libre', cursive;
   text-transform: uppercase; }
 
 section {
@@ -104,7 +104,7 @@ section {
   section header {
     padding: 0 0 60px 0; }
   section > h1 {
-    font-family: 'Codystar', cursive;
+    font-family: 'Averia Serif Libre', cursive;
     text-transform: uppercase; }
 
 p {
