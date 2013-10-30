@@ -12,7 +12,7 @@
     <li ng-repeat="project in projects">
       <a class="link-wrapper" href="/work/{{project.slug}}">
         <div class="thumb">
-          <img src="{{project.thumb}}" alt="{{project.title}}" class="work-thumb" />
+          <img ng-src="{{project.thumb}}" alt="{{project.title}}" class="work-thumb" />
           <div class="screen"></div>
         </div>
         <div class="title">

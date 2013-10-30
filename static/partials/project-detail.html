@@ -8,11 +8,11 @@
   <p class="subhead" ng-bind-html="description"></p>
 
   <div class="hero">
-    <img src="{{project.hero}}" alt="{{project.title}}">
+    <img ng-src="{{project.hero}}" alt="{{project.title}}">
   </div>
   
   <div class="work-images">
-    <img ng-repeat="slide in project.slides" src="{{slide}}" alt="{{project.title}}" />
+    <img ng-repeat="slide in project.slides" ng-src="{{slide}}" alt="{{project.title}}" />
   </div>
 
   <a href="/projects" class="back">All projects</a>
